@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DillenKelton/Film-List/issues"
   },
-  "homepage": "https://github.com/DillenKelton/Film-List#readme"
+  "homepage": "https://github.com/DillenKelton/Film-List#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
