@@ -1,0 +1,22 @@
+{
+  "name": "filmproject",
+  "version": "1.0.0",
+  "description": "A RESTFUL web application that uses node.js for the backend and react for the front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DillenKelton/Film-List.git"
+  },
+  "author": "Dillen Kelton <dillenrindellkelton@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DillenKelton/Film-List/issues"
+  },
+  "homepage": "https://github.com/DillenKelton/Film-List#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
