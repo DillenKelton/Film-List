@@ -2,7 +2,7 @@
   "name": "filmproject",
   "version": "1.0.0",
   "description": "A RESTFUL web application that uses node.js for the backend and react for the front end",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
