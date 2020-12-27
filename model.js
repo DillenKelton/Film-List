@@ -1,12 +1,30 @@
 const mongoose = require("mongoose");
 
 const filmSchema = new mongoose.Schema({
-  name: String,
-  releaseYear: String,
-  dateWatched: String,
-  blame: String,
-  poster: String,
-  tags: [String],
+  name: {
+    type: String,
+    required: true,
+  },
+  releaseYear: {
+    type: String,
+    required: true,
+  },
+  dateWatched: {
+    type: String,
+    required: true,
+  },
+  blame: {
+    type: String,
+    required: true,
+  },
+  poster: {
+    type: String,
+    required: true,
+  },
+  tags: {
+    type: [String],
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Films", filmSchema);
