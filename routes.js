@@ -1,5 +1,5 @@
 const express = require("express");
-const Films = require("./model");
+const Film = require("./model");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
 
 router.post("/addFilm", async (req, res) => {
   try {
-    const newFilm = await Films.create(req.body);
+    const newFilm = await Film.create(req.body);
     res.send(newFilm);
   } catch (error) {
     res.status(400).send(error);
