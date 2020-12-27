@@ -5,9 +5,15 @@ const routes = require("./routes");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Connects to the database
+// Load environmental variables
+require("dotenv").config();
+
+// Connect to the database
 mongoose
-  .connect("TODO", { useNewUrlParser: true })
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.ny5dv.mongodb.net/filmlist?retryWrites=true&w=majority`,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -15,10 +21,10 @@ mongoose
     console.log(error);
   });
 
-// Starts listening for connections to the server
+// Start listening for connections to the server
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// Uses routes
+// Use routes
 app.use("/", routes);
