@@ -26,5 +26,8 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+// Body parser
+app.use(express.json());
+
 // Use routes
 app.use("/", routes);

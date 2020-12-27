@@ -4,7 +4,7 @@
   "description": "A RESTFUL web application that uses node.js for the backend and react for the front end",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "nodemon"
   },
   "repository": {
     "type": "git",
