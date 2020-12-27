@@ -1,10 +1,24 @@
 const express = require("express");
-const app = express();
-const port = process.env.PORT || 3000;
+const mongoose = require("mongoose");
 const routes = require("./routes");
 
-app.use("/", routes);
+const app = express();
+const port = process.env.PORT || 3000;
 
+// Connects to the database
+mongoose
+  .connect("TODO", { useNewUrlParser: true })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+// Starts listening for connections to the server
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+// Uses routes
+app.use("/", routes);
