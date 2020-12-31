@@ -2,10 +2,12 @@ const express = require("express");
 const Film = require("./model");
 const router = express.Router();
 
+// @desc Gets all films
 router.get("/", async (req, res) => {
   res.send("hello world!");
 });
 
+// @desc Adds a new film to the database
 router.post("/addFilm", async (req, res) => {
   try {
     const newFilm = await Film.create(req.body);
@@ -15,6 +17,7 @@ router.post("/addFilm", async (req, res) => {
   }
 });
 
+// @desc Removes a film from the database using its id
 router.delete("/:id", async (req, res) => {
   try {
     const film = await Film.findById(req.params.id);
