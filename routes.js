@@ -4,7 +4,12 @@ const router = express.Router();
 
 // @desc Gets all films
 router.get("/", async (req, res) => {
-  res.send("hello world!");
+  try {
+    const films = await Film.find({});
+    res.status(200).send(films);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 
 // @desc Gets a film using its id
