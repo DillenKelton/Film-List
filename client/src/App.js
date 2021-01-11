@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import "./App.css";
 export default class App extends React.Component {
   state = {
     films: [],
@@ -17,7 +16,7 @@ export default class App extends React.Component {
       <div>
         <ul className="films">
           {films.map((film) => (
-            <li className="film">
+            <li className="film" key={film._id}>
               <p>
                 <strong>Name:</strong> {film.name}
               </p>
@@ -25,7 +24,13 @@ export default class App extends React.Component {
                 <strong>Year:</strong> {film.releaseYear}
               </p>
               <p>
+                <strong>Watched:</strong> {film.dateWatched}
+              </p>
+              <p>
                 <strong>Blame:</strong> {film.blame}
+              </p>
+              <p>
+                <strong>Tags:</strong> {film.tags}
               </p>
             </li>
           ))}
