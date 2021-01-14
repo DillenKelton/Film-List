@@ -5,7 +5,7 @@ export default class App extends React.Component {
     films: [],
   };
   componentDidMount() {
-    axios.get("http://localhost:5000/").then((response) => {
+    axios.get("http://72.133.97.71:5000/").then((response) => {
       this.setState({ films: response.data });
     });
   }
