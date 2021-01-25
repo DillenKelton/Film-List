@@ -17,7 +17,7 @@ export default class App extends React.Component {
         <ul className="films">
           {films.map((film) => (
             <li className="film" key={film._id}>
-              <img src={"posters/" + film.poster}></img>
+              <img src={"posters/" + film.poster} alt="No poster"></img>
               <p>
                 <strong>Name:</strong> {film.name}
               </p>
