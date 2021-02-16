@@ -4,8 +4,17 @@ export default class App extends React.Component {
   state = {
     films: [],
   };
+
   componentDidMount() {
-    axios.get("http://72.133.97.71:5000/").then((response) => {
+    this.stateTimer = setInterval(() => this.updateState(), 1000); // updates state on timer
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.stateTimer);
+  }
+
+  updateState() {
+    axios.get(process.env.REACT_APP_API_URL).then((response) => {
       this.setState({ films: response.data });
     });
   }
