@@ -14,7 +14,7 @@ export default class App extends React.Component {
   }
 
   updateState() {
-    axios.get("http://72.133.97.71:5000/").then((response) => {
+    axios.get(process.env.REACT_APP_API_URL).then((response) => {
       this.setState({ films: response.data });
     });
   }

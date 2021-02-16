@@ -5,7 +5,7 @@ export default class AddFilm extends React.Component {
   addFilmClick() {
     axios({
       method: "post",
-      url: "http://72.133.97.71:5000/addFilm",
+      url: `${process.env.REACT_APP_API_URL}/addFilm`,
       data: {
         name: document.getElementById("filmName").value,
         releaseYear: document.getElementById("releaseYear").value,
