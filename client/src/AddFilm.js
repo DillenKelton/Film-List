@@ -22,16 +22,14 @@ export default class AddFilm extends React.Component {
       <div className="addFilmForm">
         <label htmlFor="filmName">Name: </label>
         <input type="text" id="filmName"></input>
-        <br />
         <label htmlFor="releaseYear">Year: </label>
         <input type="text" id="releaseYear"></input>
-        <br />
         <label htmlFor="dateWatched">Watched: </label>
         <input type="text" id="dateWatched"></input>
-        <br />
         <label htmlFor="blame">Blame: </label>
         <input type="text" id="blame"></input>
-        <br />
+        <label htmlFor="posterUpload">Poster: </label>
+        <input type="file" id="posterUpload"></input>
         <button type="button" onClick={this.addFilmClick}>
           Add
         </button>
