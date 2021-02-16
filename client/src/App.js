@@ -19,6 +19,13 @@ export default class App extends React.Component {
     });
   }
 
+  deleteFilmClick(id) {
+    axios({
+      method: "delete",
+      url: `${process.env.REACT_APP_API_URL}/${id}`,
+    });
+  }
+
   render() {
     const { films } = this.state;
     return (
@@ -42,6 +49,12 @@ export default class App extends React.Component {
               <p>
                 <strong>Tags:</strong> {film.tags}
               </p>
+              <button
+                type="button"
+                onClick={() => this.deleteFilmClick(film._id)}
+              >
+                Delete
+              </button>
             </li>
           ))}
         </ul>
