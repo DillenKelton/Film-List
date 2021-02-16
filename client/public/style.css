@@ -16,7 +16,16 @@ img {
     color:white;
 }
 
+.films {
+    display:grid;
+    grid-template-columns: max-content;
+    grid-gap:30px;
+}
+
 .addFilmForm {
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:10px;
     width: 200px;
     padding: 20px;
     position:absolute;
@@ -24,12 +33,21 @@ img {
     top: 0px;
 }
 
+.addFilmForm label {
+    text-align: right;
+}
+
 .addFilmForm input {
     width: 100%;
 }
 
+#posterUpload {
+    position: relative;
+    left: 80px;
+}
+
 .addFilmForm button {
-    width: 100px;
+    width: 200px;
     position:relative;
-    left: 50px;
+    left: 240px;
 }
